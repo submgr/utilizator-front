@@ -20,6 +20,10 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/AppOnboarding.vue')
       },
       {
+        path: 'home',
+        component: () => import('@/views/HomeScreen.vue')
+      },
+      {
         path: 'tab1',
         component: () => import('@/views/Tab1Page.vue')
       },
