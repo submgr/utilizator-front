@@ -24,6 +24,14 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/HomeScreen.vue')
       },
       {
+        path: 'howtosort',
+        component: () => import('@/views/SortingGuide.vue')
+      },
+      {
+        path: 'recyclepoints',
+        component: () => import('@/views/RecyclePoints.vue')
+      },
+      {
         path: 'tab1',
         component: () => import('@/views/Tab1Page.vue')
       },

@@ -34,15 +34,13 @@
           </swiper-slide>
 
           <swiper-slide style="display: block; padding-left: 11px; padding-right: 11px;">
-            <img src="https://vplate.ru/images/article/thumb/715-0/2020/08/vidy-pamyati-i-ih-harakteristika-8.jpg" style="height: 28vh;" class="swiperimg_special1img"/>
-            <h1 style="font-weight: 700; font-size: 18px !important; color: #4A89DC; margin-top: 3.3rem; margin-bottom: -1.15rem !important;">{$t('onboarding_slide3_subtitle')}</h1>
-            <h2 style="font-weight: 800; font-size: 5vh; color: white;">{$t('onboarding_slide3_title')}</h2>
-            <p style="opacity: 0.6; font-weight: 800; font-size: 2vh;  color: white; margin-top: -1vh;">{$t('onboarding_slide3_beforetext')}</p>
-            <p style="opacity: 0.6; font-size: 18px; font-weight: 500; color: #999999; line-height: 24px !important; letter-spacing: -0.8px; margin-top: -1vh;">
-              {$t('onboarding_slide3_text')}
+            <img src="../assets/graphics/3d-fluency-globe.png" style="height: 32vh; padding-top: 0vh"/>
+            <h2 style="font-weight: 800; font-size: 35px; color: white;">Пора начинать</h2>
+            <p style="opacity: 0.6; font-size: 18px; font-weight: 500; color: #999999; line-height: 24px !important; letter-spacing: -0.8px;">
+                Мы расскажем вам больше о правильном разделении мусора и поможем начать, а так же покажем, как ваш личный вклад положительно влияет на мир вокруг.
             </p>
             <router-link to="/tabs/home" @click="save_state">
-                <img style="height: 15vh;" src="https://vplate.ru/images/article/thumb/715-0/2020/08/vidy-pamyati-i-ih-harakteristika-8.jpg" class="startjourney_routerbtn">
+                <img style="height: 15vh;" src="../assets/graphics/icon-yellow-gonext.svg" class="startjourney_routerbtn">
             </router-link>
           </swiper-slide>
         </swiper>

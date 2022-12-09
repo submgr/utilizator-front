@@ -3,11 +3,11 @@
       <ion-content :fullscreen="true">
         <ion-header collapse="condense">
           <ion-toolbar>
-            <ion-title size="large">{ $t('home_screen_title') }}</ion-title>
+            <ion-title size="large">Добро пожаловать</ion-title>
           </ion-toolbar>
         </ion-header>
         <div class="specialcard"><div class="specialcard_text">
-          <p style="font-size: 2.1vh;">{ $t('home_specialcard_text') }}<i style="font-weight: 200;">⠀{ $t('home_specialcard_text_finalnotice')}}</i> </p>
+          <p style="font-size: 2.1vh;">Распределить мусор<i style="font-weight: 200;"><br/>Мы подскажем через камеру вашего устройства, куда лучше всего отправить мусор</i> </p>
           <router-link to="/tabs/quiz">
             <img style="height: 7vh; right: 0 !important;" src="../assets/graphics/icon-yellow-gonext.svg">
           </router-link>
@@ -18,7 +18,7 @@
         <ion-grid>
           <ion-row>
             <ion-col size="8">
-              <router-link to="/tabs/interestingfacts">
+              <router-link to="/tabs/howtosort">
                 <div class="card bg2 height20vh borderradius30 noborders" style="margin-top: 4%"><div class="card_text">{$t('home_tile_lgbtfacts')}}</div></div>
               </router-link>
             </ion-col>
@@ -119,7 +119,7 @@
     inset: 0;
     border-radius: 23.4px; 
     padding: 2.4px;
-    background:linear-gradient(35deg,rgba(75, 58, 108, 0.533),rgba(242, 0, 255, 0.533)); 
+    background:linear-gradient(35deg,rgba(61, 108, 58, 0.533),rgba(0, 255, 4, 0.533)); 
     -webkit-mask: 
        linear-gradient(#fff 0 0) content-box, 
        linear-gradient(#fff 0 0);
@@ -128,7 +128,7 @@
   }
   @media (prefers-color-scheme: light) {
       .specialcard::before {
-        background:linear-gradient(35deg,rgb(69, 42, 123),rgb(242, 0, 255)); 
+        background:linear-gradient(35deg,rgb(68, 128, 71),rgb(89, 255, 0)); 
         padding: 2.9px;
       }
   }

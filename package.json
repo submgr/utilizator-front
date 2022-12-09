@@ -12,11 +12,18 @@
   "dependencies": {
     "@ionic/vue": "^6.0.0",
     "@ionic/vue-router": "^6.0.0",
+    "@mapbox/mapbox-gl-geocoder": "^5.0.1",
+    "@studiometa/vue-mapbox-gl": "^2.0.2",
+    "axios": "^1.2.1",
     "core-js": "^3.6.5",
     "ionicons": "^6.0.3",
+    "mapbox-gl": "^2.11.1",
     "swiper": "^8.4.5",
     "vue": "^3.2.21",
-    "vue-router": "^4.0.12"
+    "vue-axios": "^3.5.2",
+    "vue-router": "^4.0.12",
+    "vue-yandex-maps": "^0.12.3",
+    "vue3-google-map": "^0.15.0"
   },
   "devDependencies": {
     "@types/jest": "^27.0.2",
