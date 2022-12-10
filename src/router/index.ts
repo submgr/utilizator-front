@@ -32,6 +32,10 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/RecyclePoints.vue')
       },
       {
+        path: 'livecamera',
+        component: () => import('@/views/LiveCamera.vue')
+      },
+      {
         path: 'tab1',
         component: () => import('@/views/Tab1Page.vue')
       },

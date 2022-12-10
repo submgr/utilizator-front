@@ -1,5 +1,7 @@
 {
   "name": "Utilizator",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "vue"
 }

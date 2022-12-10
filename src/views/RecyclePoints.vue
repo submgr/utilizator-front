@@ -91,9 +91,9 @@ export default defineComponent({
         }
     },
     mounted() {
-        axios.get("http://192.168.129.84:8080/points/city/Any").then((response) => {
+        axios.get("http://192.168.129.66:8080/points/city/Any").then((response) => {
             console.log(response.data)
-            var got_data = response.data
+            var got_data = response.data 
             this.markersStorage = got_data
         })
     },
