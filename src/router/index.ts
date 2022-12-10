@@ -5,7 +5,7 @@ import TabsPage from '../views/TabsPage.vue'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/tabs/tab1'
+    redirect: '/tabs/main'
   },
   {
     path: '/tabs/',
@@ -13,7 +13,11 @@ const routes: Array<RouteRecordRaw> = [
     children: [
       {
         path: '',
-        redirect: '/tabs/tab1'
+        redirect: '/tabs/main'
+      },
+      {
+        path: 'main',
+        component: () => import('@/views/MainScreen.vue')
       },
       {
         path: 'onboarding',
@@ -28,12 +32,24 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/SortingGuide.vue')
       },
       {
+        path: 'livechat',
+        component: () => import('@/views/LiveChat.vue')
+      },
+      {
+        path: 'creativeideas',
+        component: () => import('@/views/CreativeIdeas.vue')
+      },
+      {
         path: 'recyclepoints',
         component: () => import('@/views/RecyclePoints.vue')
       },
       {
         path: 'livecamera',
         component: () => import('@/views/LiveCamera.vue')
+      },
+      {
+        path: 'knowyoubetter',
+        component: () => import('@/views/KnowYouBetter.vue')
       },
       {
         path: 'tab1',

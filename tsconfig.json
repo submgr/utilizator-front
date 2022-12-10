@@ -5,6 +5,7 @@
     "noImplicitAny": false,
     "strict": false,
     "jsx": "preserve",
+    "checkJs": false,
     "importHelpers": true,
     "moduleResolution": "node",
     "skipLibCheck": true,

@@ -39,7 +39,7 @@
             <p style="opacity: 0.6; font-size: 18px; font-weight: 500; color: #999999; line-height: 24px !important; letter-spacing: -0.8px;">
                 Мы расскажем вам больше о правильном разделении мусора и поможем начать, а так же покажем, как ваш личный вклад положительно влияет на мир вокруг.
             </p>
-            <router-link to="/tabs/home" @click="save_state">
+            <router-link to="/tabs/knowyoubetter" @click="save_state">
                 <img style="height: 15vh;" src="../assets/graphics/icon-yellow-gonext.svg" class="startjourney_routerbtn">
             </router-link>
           </swiper-slide>

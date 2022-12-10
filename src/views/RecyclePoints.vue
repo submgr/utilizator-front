@@ -5,7 +5,7 @@
     <ion-content :fullscreen="true">
 
         <div style="height: 100%; border-radius: 10% / 50%; margin-bottom: -5vh;">
-            <yandexMap :coords="coords" zoom=10 style="height: 100%; border-radius: 20px !important; margin-bottom: -5vh;">
+            <yandexMap :coords="coords" zoom=13 style="height: 100%; border-radius: 20px !important; margin-bottom: -5vh;">
                 <li v-for="marker in markersStorage" :key="marker.id">
                     <ymapMarker :coords="[marker.latitude, marker.longitude]" :marker-id="marker.id" @Click="showDetailsForPoint(marker.id)" marker-type="placemark" />
                 </li>
@@ -69,6 +69,8 @@ import {
     cubeOutline
 } from 'ionicons/icons';
 
+
+
 export default defineComponent({
     name: 'Tab1Page',
     components: {
@@ -76,14 +78,16 @@ export default defineComponent({
         IonPage,
         yandexMap,
         ymapMarker,
-        IonModal
+        IonModal,
+        
     },
     data() {
         return {
+            state: 'awaits',
             callOutline,
             calendarOutline,
             cubeOutline,
-            coords: [54.828966, 39.831893],
+            coords: [53.191966, 50.103893],
             markersStorage: [],
             message_modal_isOpen: "nope",
             flaggedTemp_CurrentPointOnView: [],
@@ -91,7 +95,7 @@ export default defineComponent({
         }
     },
     mounted() {
-        axios.get("http://192.168.129.66:8080/points/city/Any").then((response) => {
+        axios.get("http://192.168.129.84:8080/points/city/Any").then((response) => {
             console.log(response.data)
             var got_data = response.data 
             this.markersStorage = got_data

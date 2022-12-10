@@ -6,30 +6,34 @@
             <ion-title size="large">Добро пожаловать</ion-title>
           </ion-toolbar>
         </ion-header>
-        <div class="specialcard"><div class="specialcard_text">
-          <p style="font-size: 2.1vh;">Распределить мусор<i style="font-weight: 200;"><br/>Мы подскажем через камеру вашего устройства, куда лучше всего отправить мусор</i> </p>
-          <router-link to="/tabs/quiz">
-            <img style="height: 7vh; right: 0 !important;" src="../assets/graphics/icon-yellow-gonext.svg">
-          </router-link>
-        </div></div>
+        <router-link to="/tabs/livecamera">
+          <div class="card bg5 borderradius30 card-smallheight" style="margin-top: 7%"><div class="card_text"></div></div>
+        </router-link>
         <!--<div class="card bg1 borderradius30" style="margin-top: 6%"><div class="card_text">Пройти тест</div></div>-->
   
         <!-- https://www.stonewall.org.uk/media/lgbt-facts-and-figures -->
-        <ion-grid>
+        <ion-grid style="margin-top: -5%;"> 
           <ion-row>
             <ion-col size="8">
-              <router-link to="/tabs/howtosort">
-                <div class="card bg2 height20vh borderradius30 noborders" style="margin-top: 4%"><div class="card_text">{$t('home_tile_lgbtfacts')}}</div></div>
+              <router-link to="/tabs/creativeideas">
+                <div class="card bg2 height20vh borderradius30 noborders" style="margin-top: 4%"><div class="card_text"></div></div>
               </router-link>
             </ion-col>
             <ion-col>
-              <router-link to="/tabs/welcome">
-                <div class="card bg3 height20vh borderradius30 noborders" style="margin-top: 8%"><div class="card_text direction-bottom-top-text" style="width: 400vw; height: 28vh; margin-left: -3vw !important;"><p>{ $t('home_tile_aboutapp')}}</p></div></div>
+              <router-link to="/tabs/livechat">
+                <div class="card bg3 height20vh borderradius30 noborders" style="margin-top: 8%"><div class="card_text direction-bottom-top-text" style="width: 400vw; height: 28vh; margin-left: -3vw !important;"><p></p></div></div>
               </router-link>
             </ion-col>
           </ion-row>
         </ion-grid>
-        <div class="card bg4 borderradius30 card-smallheight" @click="shareapp_init" style="margin-top: 1%"><div class="card_text">{$t('home_tile_shareapp')}}</div></div>
+        <router-link to="/tabs/howtosort">
+          <div class="card bg6 borderradius30 card-smallheight" style="margin-top: 2%"><div class="card_text"></div></div>
+        </router-link>
+        <router-link to="/tabs/recyclepoints">
+          <div class="card bg4 borderradius30 card-smallheight" style="margin-top: -1.9%"><div class="card_text"></div></div>
+        </router-link>
+        
+        
       </ion-content>
       <ion-modal @willDismiss="Modal_onWillDismiss" :is-open="message_modal_isOpen == 'shareapp'" trigger="open-modal" :initial-breakpoint="0.55" :breakpoints="[0, 0.55]" handle-behavior="cycle">
           <ion-content class="ion-padding">
@@ -79,13 +83,19 @@
     background: linear-gradient(to bottom, #4322500a 10%, #432250af), url('https://images.unsplash.com/photo-1531688335250-6fad807d3374?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80') !important;
   }
   .bg2{
-    background: linear-gradient(to bottom, #4322500a 10%, #432250af), url('https://images.unsplash.com/photo-1592751854342-ea1f2edbc2bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80') !important;
+    background: linear-gradient(to bottom, #43225000 10%, #43225000), url('../assets/graphics/SC_43.png') !important;
   }
   .bg3{
-    background: linear-gradient(to bottom, #674ce073 10%, #6387c985), url('https://images.unsplash.com/photo-1627495381931-a3f444781cd1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80') !important;
+    background: linear-gradient(to bottom, #674ce000 10%, #6387c900), url('../assets/graphics/SC_45_3.png') !important;
   }
   .bg4{
-    background: linear-gradient(to bottom, #16452842 10%, #0000006e), url('https://images.unsplash.com/photo-1552068751-34cb5cf055b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1965&q=80') !important;
+    background: linear-gradient(to bottom, #16452800 10%, #00000000), url('../assets/graphics/SC_46_1.png') !important;
+  }
+  .bg5{
+    background: linear-gradient(to bottom, #16452800 10%, #00000000), url('../assets/graphics/SC_47_2.png') !important;
+  }
+  .bg6{
+    background: linear-gradient(to bottom, #16452800 10%, #00000000), url('../assets/graphics/SC_48_7.png') !important;
   }
   .card{
     position: relative;
@@ -98,7 +108,7 @@
     background-size: cover !important;
   }
   .card-smallheight{
-    height: 16vh;
+    height: 19vh;
     margin-bottom: 1.4rem;
   }
   .specialcard{
@@ -119,7 +129,7 @@
     inset: 0;
     border-radius: 23.4px; 
     padding: 2.4px;
-    background:linear-gradient(35deg,rgba(61, 108, 58, 0.533),rgba(0, 255, 4, 0.533)); 
+    background:linear-gradient(35deg,rgba(132, 229, 133, 0.96), rgba(11, 237, 56, 0.971)); 
     -webkit-mask: 
        linear-gradient(#fff 0 0) content-box, 
        linear-gradient(#fff 0 0);
@@ -128,7 +138,7 @@
   }
   @media (prefers-color-scheme: light) {
       .specialcard::before {
-        background:linear-gradient(35deg,rgb(68, 128, 71),rgb(89, 255, 0)); 
+        background:linear-gradient(35deg,rgba(132, 229, 133, 0.96), rgba(11, 237, 56, 0.971)); 
         padding: 2.9px;
       }
   }
